@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชำระเงิน - GameShop Roblox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <video class="background-video" autoplay loop muted>
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <h1>💳 ชำระเงิน</h1>
+        <a href="index.html" class="btn-home">🏠 Home</a>
+    </header>
+
+    <section class="payment">
+        <h2>คุณกำลังซื้อ: <span id="item-name"></span></h2>
+        <p>ราคา: <span id="item-price"></span> บาท</p>
+
+        <!-- ฟอร์มการชำระเงิน -->
+        <form action="confirm.html" method="POST">
+            <label for="username">🎮 Username Roblox:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">🔑 Password Roblox:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="btn buy">✅ ยืนยันการซื้อ</button>
+        </form>
+
+        <!-- แสดงรูปเบอร์บัญชี -->
+        <div class="payment-method">
+            <h3>วิธีการชำระเงิน:</h3>
+            <p>กรุณาทำการโอนเงินไปยังบัญชีด้านล่างนี้:</p>
+            <img src="bank-account-image.jpg" alt="บัญชีธนาคาร" class="bank-image">
+            <p>เลขที่บัญชี: 123-456-7890 (ธนาคาร ABC)</p>
+            <p>โปรดเก็บหลักฐานการโอนเงินเพื่อยืนยันการชำระเงิน</p>
+        </div>
+    </section>
+
+    <script>
+        // ดึงค่าจาก URL และแสดงผล
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('item-name').innerText = params.get('item') || 'ไม่ระบุ';
+        document.getElementById('item-price').innerText = params.get('price') || '0';
+    </script>
+
+    <footer>
+        <p>&copy; 2025 GameShop Roblox - บริการเติมเกมอันดับ 1</p>
+    </footer>
+
+</body>
+</html>

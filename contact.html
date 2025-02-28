@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อซื้อสินค้า - GameShop Roblox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <video class="background-video" autoplay loop muted>
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <h1>📞 ติดต่อซื้อสินค้า</h1>
+        <a href="index.html" class="btn-home">🏠 Home</a>
+    </header>
+
+    <section class="contact-form">
+        <h2>กรอกข้อมูลเพื่อทำการซื้อ</h2>
+
+        <form action="confirm.html" method="POST">
+            <label for="username">🎮 Username Roblox:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">🔑 Password Roblox:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="map">🗺️ Map ที่ต้องการซื้อ:</label>
+            <input type="text" id="map" name="map" required>
+
+            <label for="item">🎁 สินค้าที่ต้องการ:</label>
+            <input type="text" id="item" name="item" placeholder="กรุณากรอกสินค้าที่ต้องการ" required>
+
+            <button type="submit" class="btn submit">✅ ยืนยันการซื้อ</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 GameShop Roblox - บริการเติมเกมอันดับ 1</p>
+    </footer>
+
+</body>
+</html>
